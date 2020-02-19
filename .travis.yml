@@ -11,36 +11,14 @@ os: linux
 dist: bionic
 jobs:
   include:
-   - name: "amd64 py3.8"
+   - name: "amd64"
      os: linux
      dist: bionic
      arch: amd64
-     python: 3.8
-   - name: "amd64 py3.7"
-     os: linux
-     dist: bionic
-     arch: amd64
-     python: 3.7
-   - name: "amd64 py3.6"
-     os: linux
-     dist: bionic
-     arch: amd64
-     python: 3.6
-   - name: "arm64 py3.8"
+   - name: "arm64"
      os: linux
      dist: bionic
      arch: arm64
-     python: 3.8
-   - name: "arm64 py3.7"
-     os: linux
-     dist: bionic
-     arch: arm64
-     python: 3.7
-   - name: "arm64 py3.6"
-     os: linux
-     dist: bionic
-     arch: arm64
-     python: 3.6
 install:
   - pip install --upgrade pip --no-cache-dir
   - pip install --upgrade -r requirements.txt --no-cache-dir
