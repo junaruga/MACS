@@ -1,13 +1,24 @@
+arch:
+  - amd64
+  - arm64
+os: linux
+matrix:
+  include:
+   - os: linux
+     arch: amd64
+   - os: linux
+     arch: arm64
+
 language: python
 python:
   - "3.8"
   - "3.7"
   - "3.6"  
-  - "3.8-dev"
+  # - "3.8-dev"
 install:
-  - pip install --upgrade pip
-  - pip install --upgrade -r requirements.txt
-  - python setup.py install
+  - sudo -H pip install --upgrade pip
+  - sudo -H pip install --upgrade -r requirements.txt
+  - sudo -H python setup.py install
 script:
   - pytest --runxfail
   - cd test
