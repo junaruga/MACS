@@ -16,9 +16,9 @@ python:
   - "3.6"  
   # - "3.8-dev"
 install:
-  - sudo -H pip install --upgrade pip
-  - sudo -H pip install --upgrade -r requirements.txt
-  - sudo -H python setup.py install
+  - sudo pip install --upgrade pip
+  - sudo pip install --upgrade -r requirements.txt
+  - python setup.py install
 script:
   - pytest --runxfail
   - cd test
