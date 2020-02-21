@@ -6,21 +6,15 @@ jobs:
    - name: "amd64 py3.8"
      arch: amd64
      python: 3.8
-   - name: "amd64 py3.7"
-     arch: amd64
-     python: 3.7
-   - name: "amd64 py3.6"
-     arch: amd64
-     python: 3.6
    - name: "arm64 py3.8"
      arch: arm64
      python: 3.8
-   - name: "arm64 py3.7"
-     arch: arm64
-     python: 3.7
-   - name: "arm64 py3.6"
-     arch: arm64
-     python: 3.6
+   - name: "ppc64le py3.8"
+     arch: ppc64le
+     python: 3.8
+   - name: "s390x py3.8"
+     arch: s390x
+     python: 3.8
 install:
   - pip install --upgrade pip
   - pip install --upgrade -r requirements.txt --no-cache-dir
